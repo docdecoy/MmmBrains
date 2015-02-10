@@ -20,7 +20,7 @@ namespace MmmBrains
 
         public Color PickDice()
         {
-            int diceColor = _numberGenerator.Next(1, 3);
+            int diceColor = _numberGenerator.Next(1, 4);
 
             switch (diceColor)
             {
@@ -36,7 +36,7 @@ namespace MmmBrains
         
         public string Roll()
         {
-            int diceResult = _numberGenerator.Next(1, 6);
+            int diceResult = _numberGenerator.Next(1, 7);
 
             if (Color == Color.Green)
             {
