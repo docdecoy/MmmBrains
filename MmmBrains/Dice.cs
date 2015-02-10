@@ -18,56 +18,30 @@ namespace MmmBrains
             Color = color;
         }
 
+        //public Color PickDice()
+        //{
+        //    int diceColor = _numberGenerator.Next(1, 3);
+
+        //    switch (diceColor)
+        //    {
+        //        case 1:
+        //            return Color.Green;
+        //        case 2:
+        //            return Color.Yellow;
+        //        case 3:
+        //            return Color.Red;
+        //    }
+        //    throw new InvalidOperationException();
+        //}
+        
         public string Roll()
         {
-            int result = _numberGenerator.Next(1, 6);
+            int diceResult = _numberGenerator.Next(1, 6);
 
-            if (Color == Color.Red)
+            if (Color == Color.Green)
             {
-                if (result == 1)
+                switch (diceResult)
                 {
-                    return "B";
-                }
-                else if (result == 2)
-                {
-                    return "S";
-                }
-                else if (result == 3)
-                {
-                    return "F";
-                }
-                else if (result == 4)
-                {
-                    return "F";
-                }
-                else if (result == 5)
-                {
-                    return "S";
-                }
-                else if (result == 6)
-                {
-                    return "S";
-                }
-            }
-            else if (Color == Color.Yellow)
-            {
-                if (result == 1 || result == 6)
-                {
-                    return "B";
-                }
-                else if (result == 2 || result == 5)
-                {
-                    return "S";
-                }
-                else if (result == 3 || result == 4)
-                {
-                    return "F";
-                }
-            }
-            else if (Color == Color.Green)
-            {
-                switch (result)
-                { 
                     case 1:
                     case 2:
                     case 6:
@@ -79,7 +53,37 @@ namespace MmmBrains
                         return "S";
                 }
             }
-                throw new InvalidOperationException();
+            else if (Color == Color.Yellow)
+            {
+                switch (diceResult)
+                {
+                    case 1:
+                    case 6:
+                        return "B";
+                    case 3:
+                    case 4:
+                        return "F";
+                    case 2:
+                    case 5:
+                        return "S";
+                }
+            }
+            else if (Color == Color.Red)
+            {
+                switch (diceResult)
+                {
+                    case 1:
+                        return "B";
+                    case 3:
+                    case 4:
+                        return "F";
+                    case 2:
+                    case 5:
+                    case 6:
+                        return "S";
+                }
+            }
+            throw new InvalidOperationException();
         }
     }
 }
