@@ -28,20 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnRoll = new System.Windows.Forms.Button();
+            this.txtResults = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // btnRoll
+            // 
+            this.btnRoll.Location = new System.Drawing.Point(243, 308);
+            this.btnRoll.Name = "btnRoll";
+            this.btnRoll.Size = new System.Drawing.Size(75, 23);
+            this.btnRoll.TabIndex = 0;
+            this.btnRoll.Text = "Roll!";
+            this.btnRoll.UseVisualStyleBackColor = true;
+            this.btnRoll.Click += new System.EventHandler(this.btnRoll_Click);
+            // 
+            // txtResults
+            // 
+            this.txtResults.Location = new System.Drawing.Point(211, 12);
+            this.txtResults.Multiline = true;
+            this.txtResults.Name = "txtResults";
+            this.txtResults.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtResults.Size = new System.Drawing.Size(139, 290);
+            this.txtResults.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 442);
+            this.Controls.Add(this.txtResults);
+            this.Controls.Add(this.btnRoll);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "MmmBrains";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnRoll;
+        private System.Windows.Forms.TextBox txtResults;
     }
 }
 

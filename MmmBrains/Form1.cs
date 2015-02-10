@@ -16,5 +16,12 @@ namespace MmmBrains
         {
             InitializeComponent();
         }
+
+        private void btnRoll_Click(object sender, EventArgs e)
+        {
+            Dice myDice = new Dice(Color.Purple);
+            string diceRollResult = myDice.Roll();
+            txtResults.Text += diceRollResult + "\r\n";
+        }
     }
 }
