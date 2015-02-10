@@ -18,21 +18,21 @@ namespace MmmBrains
             Color = color;
         }
 
-        //public Color PickDice()
-        //{
-        //    int diceColor = _numberGenerator.Next(1, 3);
+        public Color PickDice()
+        {
+            int diceColor = _numberGenerator.Next(1, 3);
 
-        //    switch (diceColor)
-        //    {
-        //        case 1:
-        //            return Color.Green;
-        //        case 2:
-        //            return Color.Yellow;
-        //        case 3:
-        //            return Color.Red;
-        //    }
-        //    throw new InvalidOperationException();
-        //}
+            switch (diceColor)
+            {
+                case 1:
+                    return Color.Red;
+                case 2:
+                    return Color.Yellow;
+                case 3:
+                    return Color.Green;
+            }
+            throw new InvalidOperationException();
+        }
         
         public string Roll()
         {

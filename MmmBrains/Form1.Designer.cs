@@ -39,9 +39,9 @@
             // 
             // btnRoll
             // 
-            this.btnRoll.Location = new System.Drawing.Point(245, 141);
+            this.btnRoll.Location = new System.Drawing.Point(243, 180);
             this.btnRoll.Name = "btnRoll";
-            this.btnRoll.Size = new System.Drawing.Size(75, 23);
+            this.btnRoll.Size = new System.Drawing.Size(66, 23);
             this.btnRoll.TabIndex = 0;
             this.btnRoll.Text = "Roll!";
             this.btnRoll.UseVisualStyleBackColor = true;
@@ -49,7 +49,7 @@
             // 
             // txtDiceResult1
             // 
-            this.txtDiceResult1.Location = new System.Drawing.Point(351, 63);
+            this.txtDiceResult1.Location = new System.Drawing.Point(280, 63);
             this.txtDiceResult1.Name = "txtDiceResult1";
             this.txtDiceResult1.Size = new System.Drawing.Size(29, 20);
             this.txtDiceResult1.TabIndex = 2;
@@ -57,7 +57,7 @@
             // 
             // txtDiceResult2
             // 
-            this.txtDiceResult2.Location = new System.Drawing.Point(351, 89);
+            this.txtDiceResult2.Location = new System.Drawing.Point(280, 89);
             this.txtDiceResult2.Name = "txtDiceResult2";
             this.txtDiceResult2.Size = new System.Drawing.Size(29, 20);
             this.txtDiceResult2.TabIndex = 3;
@@ -65,7 +65,7 @@
             // 
             // txtDiceResult3
             // 
-            this.txtDiceResult3.Location = new System.Drawing.Point(351, 115);
+            this.txtDiceResult3.Location = new System.Drawing.Point(280, 115);
             this.txtDiceResult3.Name = "txtDiceResult3";
             this.txtDiceResult3.Size = new System.Drawing.Size(29, 20);
             this.txtDiceResult3.TabIndex = 4;
@@ -75,21 +75,21 @@
             // 
             this.txtDiceColor1.Location = new System.Drawing.Point(245, 63);
             this.txtDiceColor1.Name = "txtDiceColor1";
-            this.txtDiceColor1.Size = new System.Drawing.Size(100, 20);
+            this.txtDiceColor1.Size = new System.Drawing.Size(29, 20);
             this.txtDiceColor1.TabIndex = 5;
             // 
             // txtDiceColor2
             // 
             this.txtDiceColor2.Location = new System.Drawing.Point(245, 89);
             this.txtDiceColor2.Name = "txtDiceColor2";
-            this.txtDiceColor2.Size = new System.Drawing.Size(100, 20);
+            this.txtDiceColor2.Size = new System.Drawing.Size(29, 20);
             this.txtDiceColor2.TabIndex = 6;
             // 
             // txtDiceColor3
             // 
             this.txtDiceColor3.Location = new System.Drawing.Point(245, 115);
             this.txtDiceColor3.Name = "txtDiceColor3";
-            this.txtDiceColor3.Size = new System.Drawing.Size(100, 20);
+            this.txtDiceColor3.Size = new System.Drawing.Size(29, 20);
             this.txtDiceColor3.TabIndex = 7;
             // 
             // Form1
