@@ -19,7 +19,7 @@ namespace MmmBrains
 
         private void btnRoll_Click(object sender, EventArgs e)
         {
-            Dice myDice = new Dice(Color.Purple);
+            Dice myDice = new Dice(Color.Red);
             string diceRollResult = myDice.Roll();
             txtResults.Text += diceRollResult + "\r\n";
         }
