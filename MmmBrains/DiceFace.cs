@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace MmmBrains
 {
-    public enum DiceFace
+    public enum DiceFaceImage
     {
         Brain,
         Feet,
         Shotgun
     }
+    //public enum DiceFaceColor
+    //{
+    //    Green,
+    //    Yellow,
+    //    Red
+    //}
 }

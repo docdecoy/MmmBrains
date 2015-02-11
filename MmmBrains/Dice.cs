@@ -15,26 +15,35 @@ namespace MmmBrains
 
         public Dice()
         {
-            Color = PickDiceColor();
+            Color = DiceFaceColor();
         }
 
-        private static Color PickDiceColor()
+        public Color DiceFaceColor()
         {
-            int diceColor = NumberGenerator.Next(1, 4);
-
-            switch (diceColor)
-            {
-                case 1:
-                    return Color.Red;
-                case 2:
-                    return Color.Yellow;
-                case 3:
-                    return Color.Green;
-            }
-            throw new InvalidOperationException();
+            Color[] strDicePool = new Color[] { Color.Green, Color.Green, Color.Green, Color.Green, Color.Green, Color.Green, Color.Yellow, Color.Yellow, Color.Yellow, Color.Yellow, Color.Red, Color.Red, Color.Red };
+            Random pickDice = new Random();
+            int index = pickDice.Next(0, 13);
+            Color value = strDicePool[index];
+            return value;
         }
+
+        //private static Color PickDiceColor()
+        //{
+        //    int diceColor = NumberGenerator.Next(1, 4);
+
+        //    switch (diceColor)
+        //    {
+        //        case 1:
+        //            return Color.Red;
+        //        case 2:
+        //            return Color.Yellow;
+        //        case 3:
+        //            return Color.Green;
+        //    }
+        //    throw new InvalidOperationException();
+        //}
         
-        public DiceFace Roll()
+        public DiceFaceImage Roll()
         {
             int diceResult = NumberGenerator.Next(1, 7);
 
@@ -45,12 +54,12 @@ namespace MmmBrains
                     case 1:
                     case 2:
                     case 6:
-                        return DiceFace.Brain;
+                        return DiceFaceImage.Brain;
                     case 3:
                     case 4:
-                        return DiceFace.Feet;
+                        return DiceFaceImage.Feet;
                     case 5:
-                        return DiceFace.Shotgun;
+                        return DiceFaceImage.Shotgun;
                 }
             }
             else if (Color == Color.Yellow)
@@ -59,13 +68,13 @@ namespace MmmBrains
                 {
                     case 1:
                     case 6:
-                        return DiceFace.Brain;
+                        return DiceFaceImage.Brain;
                     case 3:
                     case 4:
-                        return DiceFace.Feet;
+                        return DiceFaceImage.Feet;
                     case 2:
                     case 5:
-                        return DiceFace.Shotgun;
+                        return DiceFaceImage.Shotgun;
                 }
             }
             else if (Color == Color.Red)
@@ -73,14 +82,14 @@ namespace MmmBrains
                 switch (diceResult)
                 {
                     case 1:
-                        return DiceFace.Brain;
+                        return DiceFaceImage.Brain;
                     case 3:
                     case 4:
-                        return DiceFace.Feet;
+                        return DiceFaceImage.Feet;
                     case 2:
                     case 5:
                     case 6:
-                        return DiceFace.Shotgun;
+                        return DiceFaceImage.Shotgun;
                 }
             }
             throw new InvalidOperationException();

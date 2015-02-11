@@ -20,30 +20,44 @@ namespace MmmBrains
         private void btnRoll_Click(object sender, EventArgs e)
         {
             Dice myDice1 = new Dice();
-            txtDiceResult1.BackColor = myDice1.Color;
+            txtDiceResult1.BackColor = myDice1.DiceFaceColor();
             txtDiceResult1.Text = DiceFaceToStr(myDice1.Roll());
 
             Dice myDice2 = new Dice();
-            txtDiceResult2.BackColor = myDice2.Color;
+            txtDiceResult2.BackColor = myDice2.DiceFaceColor();
             txtDiceResult2.Text = DiceFaceToStr(myDice2.Roll());
 
             Dice myDice3 = new Dice();
-            txtDiceResult3.BackColor = myDice3.Color;
+            txtDiceResult3.BackColor = myDice3.DiceFaceColor();
             txtDiceResult3.Text = DiceFaceToStr(myDice3.Roll());
         }
 
-        private static string DiceFaceToStr(DiceFace face)
+        private static string DiceFaceToStr(DiceFaceImage faceImage)
         {
-            switch (face)
-            { 
-                case DiceFace.Brain:
+            switch (faceImage)
+            {
+                case DiceFaceImage.Brain:
                     return "B";
-                case DiceFace.Feet:
+                case DiceFaceImage.Feet:
                     return "F";
-                case DiceFace.Shotgun:
+                case DiceFaceImage.Shotgun:
                     return "S";
             }
             throw new InvalidOperationException();
         }
+
+        //private static Color DiceTxtToColor(DiceFaceColor faceColor)
+        //{
+        //    switch (faceColor)
+        //    {
+        //        case DiceFaceColor.Green:
+        //            return Color.Green;
+        //        case DiceFaceColor.Yellow:
+        //            return Color.Yellow;
+        //        case DiceFaceColor.Red:
+        //            return Color.Red;
+        //    }
+        //    throw new InvalidOperationException();
+        //}
     }
 }
