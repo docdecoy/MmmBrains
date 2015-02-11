@@ -45,19 +45,5 @@ namespace MmmBrains
             }
             throw new InvalidOperationException();
         }
-
-        //private static Color DiceTxtToColor(DiceFaceColor faceColor)
-        //{
-        //    switch (faceColor)
-        //    {
-        //        case DiceFaceColor.Green:
-        //            return Color.Green;
-        //        case DiceFaceColor.Yellow:
-        //            return Color.Yellow;
-        //        case DiceFaceColor.Red:
-        //            return Color.Red;
-        //    }
-        //    throw new InvalidOperationException();
-        //}
     }
 }

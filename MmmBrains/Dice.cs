@@ -20,29 +20,13 @@ namespace MmmBrains
 
         public Color DiceFaceColor()
         {
+
             Color[] strDicePool = new Color[] { Color.Green, Color.Green, Color.Green, Color.Green, Color.Green, Color.Green, Color.Yellow, Color.Yellow, Color.Yellow, Color.Yellow, Color.Red, Color.Red, Color.Red };
-            Random pickDice = new Random();
-            int index = pickDice.Next(0, 13);
+            int index = NumberGenerator.Next(0, 13);
             Color value = strDicePool[index];
             return value;
         }
-
-        //private static Color PickDiceColor()
-        //{
-        //    int diceColor = NumberGenerator.Next(1, 4);
-
-        //    switch (diceColor)
-        //    {
-        //        case 1:
-        //            return Color.Red;
-        //        case 2:
-        //            return Color.Yellow;
-        //        case 3:
-        //            return Color.Green;
-        //    }
-        //    throw new InvalidOperationException();
-        //}
-        
+   
         public DiceFaceImage Roll()
         {
             int diceResult = NumberGenerator.Next(1, 7);

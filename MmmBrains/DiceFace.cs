@@ -12,10 +12,4 @@ namespace MmmBrains
         Feet,
         Shotgun
     }
-    //public enum DiceFaceColor
-    //{
-    //    Green,
-    //    Yellow,
-    //    Red
-    //}
 }
