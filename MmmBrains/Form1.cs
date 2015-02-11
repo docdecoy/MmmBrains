@@ -21,15 +21,29 @@ namespace MmmBrains
         {
             Dice myDice1 = new Dice();
             txtDiceResult1.BackColor = myDice1.Color;
-            txtDiceResult1.Text = myDice1.Roll();
+            txtDiceResult1.Text = DiceFaceToStr(myDice1.Roll());
 
             Dice myDice2 = new Dice();
             txtDiceResult2.BackColor = myDice2.Color;
-            txtDiceResult2.Text = myDice2.Roll();
+            txtDiceResult2.Text = DiceFaceToStr(myDice2.Roll());
 
             Dice myDice3 = new Dice();
             txtDiceResult3.BackColor = myDice3.Color;
-            txtDiceResult3.Text = myDice3.Roll();
+            txtDiceResult3.Text = DiceFaceToStr(myDice3.Roll());
+        }
+
+        private static string DiceFaceToStr(DiceFace face)
+        {
+            switch (face)
+            { 
+                case DiceFace.Brain:
+                    return "B";
+                case DiceFace.Feet:
+                    return "F";
+                case DiceFace.Shotgun:
+                    return "S";
+            }
+            throw new InvalidOperationException();
         }
     }
 }

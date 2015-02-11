@@ -34,7 +34,7 @@ namespace MmmBrains
             throw new InvalidOperationException();
         }
         
-        public string Roll()
+        public DiceFace Roll()
         {
             int diceResult = NumberGenerator.Next(1, 7);
 
@@ -45,12 +45,12 @@ namespace MmmBrains
                     case 1:
                     case 2:
                     case 6:
-                        return "B";
+                        return DiceFace.Brain;
                     case 3:
                     case 4:
-                        return "F";
+                        return DiceFace.Feet;
                     case 5:
-                        return "S";
+                        return DiceFace.Shotgun;
                 }
             }
             else if (Color == Color.Yellow)
@@ -59,13 +59,13 @@ namespace MmmBrains
                 {
                     case 1:
                     case 6:
-                        return "B";
+                        return DiceFace.Brain;
                     case 3:
                     case 4:
-                        return "F";
+                        return DiceFace.Feet;
                     case 2:
                     case 5:
-                        return "S";
+                        return DiceFace.Shotgun;
                 }
             }
             else if (Color == Color.Red)
@@ -73,14 +73,14 @@ namespace MmmBrains
                 switch (diceResult)
                 {
                     case 1:
-                        return "B";
+                        return DiceFace.Brain;
                     case 3:
                     case 4:
-                        return "F";
+                        return DiceFace.Feet;
                     case 2:
                     case 5:
                     case 6:
-                        return "S";
+                        return DiceFace.Shotgun;
                 }
             }
             throw new InvalidOperationException();
