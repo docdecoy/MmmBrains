@@ -9,7 +9,7 @@ namespace MmmBrains
 {
     public class Dice
     {
-        private static Random _numberGenerator = new Random();
+        private static readonly Random NumberGenerator = new Random();
 
         public Color Color { get; private set; }
 
@@ -20,7 +20,7 @@ namespace MmmBrains
 
         private static Color PickDiceColor()
         {
-            int diceColor = _numberGenerator.Next(1, 4);
+            int diceColor = NumberGenerator.Next(1, 4);
 
             switch (diceColor)
             {
@@ -36,7 +36,7 @@ namespace MmmBrains
         
         public string Roll()
         {
-            int diceResult = _numberGenerator.Next(1, 7);
+            int diceResult = NumberGenerator.Next(1, 7);
 
             if (Color == Color.Green)
             {
