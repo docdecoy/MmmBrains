@@ -19,26 +19,17 @@ namespace MmmBrains
 
         private void btnRoll_Click(object sender, EventArgs e)
         {
-            Dice myDice1 = new Dice(Color.Empty);
-            myDice1.Color = myDice1.PickDice();
+            Dice myDice1 = new Dice();
             txtDiceResult1.BackColor = myDice1.Color;
-            txtDiceResult1.Text = "";
-            string diceRollResult1 = myDice1.Roll();
-            txtDiceResult1.Text += diceRollResult1;
+            txtDiceResult1.Text = myDice1.Roll();
 
-            Dice myDice2 = new Dice(Color.Empty);
-            myDice2.Color = myDice1.PickDice();
+            Dice myDice2 = new Dice();
             txtDiceResult2.BackColor = myDice2.Color;
-            txtDiceResult2.Text = "";
-            string diceRollResult2 = myDice1.Roll();
-            txtDiceResult2.Text += diceRollResult2;
+            txtDiceResult2.Text = myDice2.Roll();
 
-            Dice myDice3 = new Dice(Color.Empty);
-            myDice3.Color = myDice1.PickDice();
+            Dice myDice3 = new Dice();
             txtDiceResult3.BackColor = myDice3.Color;
-            txtDiceResult3.Text = "";
-            string diceRollResult3 = myDice1.Roll();
-            txtDiceResult3.Text += diceRollResult3;
+            txtDiceResult3.Text = myDice3.Roll();
         }
     }
 }

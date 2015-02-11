@@ -9,16 +9,16 @@ namespace MmmBrains
 {
     public class Dice
     {
-        private Random _numberGenerator = new Random();
+        private static Random _numberGenerator = new Random();
 
-        public Color Color { get; set; }
+        public Color Color { get; private set; }
 
-        public Dice(Color color)
+        public Dice()
         {
-            Color = color;
+            Color = PickDiceColor();
         }
 
-        public Color PickDice()
+        private static Color PickDiceColor()
         {
             int diceColor = _numberGenerator.Next(1, 4);
 
