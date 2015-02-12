@@ -9,27 +9,16 @@ namespace MmmBrains
 {
     public class Dice
     {
-        private static readonly Random NumberGenerator = new Random();
-
         public Color Color { get; private set; }
 
-        public Dice()
+        public Dice(Color diceImageColor)
         {
-            Color = DiceFaceColor();
+            Color = diceImageColor;
         }
 
-        public Color DiceFaceColor()
-        {
-
-            Color[] strDicePool = new Color[] { Color.Green, Color.Green, Color.Green, Color.Green, Color.Green, Color.Green, Color.Yellow, Color.Yellow, Color.Yellow, Color.Yellow, Color.Red, Color.Red, Color.Red };
-            int index = NumberGenerator.Next(0, 13);
-            Color value = strDicePool[index];
-            return value;
-        }
-   
         public DiceFaceImage Roll()
         {
-            int diceResult = NumberGenerator.Next(1, 7);
+            int diceResult = Global.NumberGenerator.Next(1, 7);
 
             if (Color == Color.Green)
             {
