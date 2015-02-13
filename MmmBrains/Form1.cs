@@ -21,6 +21,19 @@ namespace MmmBrains
             txtDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
         }
 
+        private static void SetTextBox(TextBox textbox, Dice dice)
+        {
+            textbox.BackColor = dice.Color;
+            textbox.Text = DiceFaceToStr(dice.Roll());
+        }
+
+        private static void ResetTextBox(TextBox textbox, bool isVisible)
+        {
+            textbox.Visible = isVisible;
+            textbox.BackColor = Color.White;
+            textbox.Text = "";
+        }
+
         private void btnRoll_Click(object sender, EventArgs e)
         {
 
@@ -28,41 +41,37 @@ namespace MmmBrains
 
             if (diceInHand.Count > 0)
             {
-                txtDiceResult1.BackColor = diceInHand[0].Color;
-                txtDiceResult1.Text = DiceFaceToStr(diceInHand[0].Roll());
+                SetTextBox(txtDiceResult1, diceInHand[0]);
             }
             else
             {
-                txtDiceResult1.Visible = false;
-                txtDiceResult1.BackColor = Color.White;
-                txtDiceResult1.Text = "";
+                ResetTextBox(txtDiceResult1, false);
             }
 
             if (diceInHand.Count > 1)
             {
-                txtDiceResult2.BackColor = diceInHand[1].Color;
-                txtDiceResult2.Text = DiceFaceToStr(diceInHand[1].Roll());
+                SetTextBox(txtDiceResult2, diceInHand[1]);
             }
             else
             {
-                txtDiceResult2.Visible = false;
-                txtDiceResult2.BackColor = Color.White;
-                txtDiceResult2.Text = "";
+                ResetTextBox(txtDiceResult2, false);
             }
 
             if (diceInHand.Count > 2)
             {
-                txtDiceResult3.BackColor = diceInHand[2].Color;
-                txtDiceResult3.Text = DiceFaceToStr(diceInHand[2].Roll());
+                SetTextBox(txtDiceResult3, diceInHand[2]);
             }
             else
             {
-                txtDiceResult3.Visible = false;
-                txtDiceResult3.BackColor = Color.White;
-                txtDiceResult3.Text = "";
+                ResetTextBox(txtDiceResult3, false);
             }
 
             txtDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
+            if (_diceCup.DiceInCup.Count == 0)
+            {
+                btnRoll.Enabled = false;
+                btnReset.Focus();
+            }
         }
 
         private static string DiceFaceToStr(DiceFaceImage faceImage)
@@ -83,15 +92,11 @@ namespace MmmBrains
         {
             _diceCup.Reset();
             txtDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
-            txtDiceResult1.Visible = true;
-            txtDiceResult2.Visible = true;
-            txtDiceResult3.Visible = true;
-            txtDiceResult1.BackColor = Color.White;
-            txtDiceResult1.Text = "";
-            txtDiceResult2.BackColor = Color.White;
-            txtDiceResult2.Text = "";
-            txtDiceResult3.BackColor = Color.White;
-            txtDiceResult3.Text = "";
+
+            ResetTextBox(txtDiceResult1, true);
+            ResetTextBox(txtDiceResult2, true);
+            ResetTextBox(txtDiceResult3, true);
+            btnRoll.Enabled = true;
         }
     }
 }

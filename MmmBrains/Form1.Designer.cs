@@ -77,7 +77,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 68);
+            this.label1.Location = new System.Drawing.Point(61, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 5;
@@ -85,10 +85,11 @@
             // 
             // txtDiceInCup
             // 
-            this.txtDiceInCup.Location = new System.Drawing.Point(64, 84);
+            this.txtDiceInCup.Location = new System.Drawing.Point(78, 68);
             this.txtDiceInCup.Name = "txtDiceInCup";
-            this.txtDiceInCup.Size = new System.Drawing.Size(100, 20);
+            this.txtDiceInCup.Size = new System.Drawing.Size(29, 20);
             this.txtDiceInCup.TabIndex = 6;
+            this.txtDiceInCup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnReset
             // 
