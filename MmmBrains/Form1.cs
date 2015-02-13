@@ -21,17 +21,27 @@ namespace MmmBrains
             txtDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
         }
 
-        private static void SetTextBox(TextBox textbox, Dice dice)
+        //private static void SetTextBox(TextBox textbox, Dice dice)
+        //{
+        //    textbox.BackColor = dice.Color;
+        //    textbox.Text = DiceFaceToStr(dice.Roll());
+        //}
+
+        private static void SetPctBox(PictureBox pctbox, Dice dice)
         {
-            textbox.BackColor = dice.Color;
-            textbox.Text = DiceFaceToStr(dice.Roll());
+            pctbox.Image = DiceFaceToImg(dice.Roll());
         }
 
-        private static void ResetTextBox(TextBox textbox, bool isVisible)
+        //private static void ResetTextBox(TextBox textbox, bool isVisible)
+        //{
+        //    textbox.Visible = isVisible;
+        //    textbox.BackColor = Color.White;
+        //    textbox.Text = "";
+        //}
+
+        private static void ResetPctBox(PictureBox pctbox, bool isVisible)
         {
-            textbox.Visible = isVisible;
-            textbox.BackColor = Color.White;
-            textbox.Text = "";
+            pctbox.Image = null;
         }
 
         private void btnRoll_Click(object sender, EventArgs e)
@@ -41,29 +51,35 @@ namespace MmmBrains
 
             if (diceInHand.Count > 0)
             {
-                SetTextBox(txtDiceResult1, diceInHand[0]);
+                //SetTextBox(txtDiceResult1, diceInHand[0]);
+                SetPctBox(pctDiceResult1, diceInHand[0]);
             }
             else
             {
-                ResetTextBox(txtDiceResult1, false);
+                //ResetTextBox(txtDiceResult1, false);
+                ResetPctBox(pctDiceResult1, false);
             }
 
             if (diceInHand.Count > 1)
             {
-                SetTextBox(txtDiceResult2, diceInHand[1]);
+                //SetTextBox(txtDiceResult2, diceInHand[1]);
+                SetPctBox(pctDiceResult2, diceInHand[1]);
             }
             else
             {
-                ResetTextBox(txtDiceResult2, false);
+                //ResetTextBox(txtDiceResult2, false);
+                ResetPctBox(pctDiceResult2, false);
             }
 
             if (diceInHand.Count > 2)
             {
-                SetTextBox(txtDiceResult3, diceInHand[2]);
+                //SetTextBox(txtDiceResult3, diceInHand[2]);
+                SetPctBox(pctDiceResult3, diceInHand[2]);
             }
             else
             {
-                ResetTextBox(txtDiceResult3, false);
+                //ResetTextBox(txtDiceResult3, false);
+                ResetPctBox(pctDiceResult3, false);
             }
 
             txtDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
@@ -74,16 +90,42 @@ namespace MmmBrains
             }
         }
 
-        private static string DiceFaceToStr(DiceFaceImage faceImage)
+        //private static string DiceFaceToStr(DiceFaceImage faceImage)
+        //{
+        //    switch (faceImage)
+        //    {
+        //        case DiceFaceImage.Brain:
+        //            return "B";
+        //        case DiceFaceImage.Feet:
+        //            return "F";
+        //        case DiceFaceImage.Shotgun:
+        //            return "S";
+        //    }
+        //    throw new InvalidOperationException();
+        //}
+
+        private static Image DiceFaceToImg(DiceFaceImage faceImage)
         {
             switch (faceImage)
             {
-                case DiceFaceImage.Brain:
-                    return "B";
-                case DiceFaceImage.Feet:
-                    return "F";
-                case DiceFaceImage.Shotgun:
-                    return "S";
+                case DiceFaceImage.GreenBrain:
+                    return Properties.Resources.GB;
+                case DiceFaceImage.GreenFeet:
+                    return Properties.Resources.GF;
+                case DiceFaceImage.GreenShotgun:
+                    return Properties.Resources.GS;
+                case DiceFaceImage.YellowBrain:
+                    return Properties.Resources.YB;
+                case DiceFaceImage.YellowFeet:
+                    return Properties.Resources.YF;
+                case DiceFaceImage.YellowShotgun:
+                    return Properties.Resources.YS;
+                case DiceFaceImage.RedBrain:
+                    return Properties.Resources.RB;
+                case DiceFaceImage.RedFeet:
+                    return Properties.Resources.RF;
+                case DiceFaceImage.RedShotgun:
+                    return Properties.Resources.RS;
             }
             throw new InvalidOperationException();
         }
@@ -93,10 +135,18 @@ namespace MmmBrains
             _diceCup.Reset();
             txtDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
 
-            ResetTextBox(txtDiceResult1, true);
-            ResetTextBox(txtDiceResult2, true);
-            ResetTextBox(txtDiceResult3, true);
+            //ResetTextBox(txtDiceResult1, true);
+            //ResetTextBox(txtDiceResult2, true);
+            //ResetTextBox(txtDiceResult3, true);
+            ResetPctBox(pctDiceResult1, true);
+            ResetPctBox(pctDiceResult2, true);
+            ResetPctBox(pctDiceResult3, true);
             btnRoll.Enabled = true;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
