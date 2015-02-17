@@ -148,5 +148,10 @@ namespace MmmBrains
         {
 
         }
+
+        private void txtDiceResult3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

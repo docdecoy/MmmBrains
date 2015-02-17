@@ -79,7 +79,7 @@
             // 
             // btnRoll
             // 
-            this.btnRoll.Font = new System.Drawing.Font("Buxton Sketch", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoll.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoll.Location = new System.Drawing.Point(259, 65);
             this.btnRoll.Name = "btnRoll";
             this.btnRoll.Size = new System.Drawing.Size(75, 27);
@@ -117,14 +117,15 @@
             this.txtDiceResult3.TabIndex = 4;
             this.txtDiceResult3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDiceResult3.Visible = false;
+            this.txtDiceResult3.TextChanged += new System.EventHandler(this.txtDiceResult3_TextChanged);
             // 
             // lblDiceInCup
             // 
             this.lblDiceInCup.AutoSize = true;
-            this.lblDiceInCup.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiceInCup.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiceInCup.Location = new System.Drawing.Point(12, 9);
             this.lblDiceInCup.Name = "lblDiceInCup";
-            this.lblDiceInCup.Size = new System.Drawing.Size(106, 26);
+            this.lblDiceInCup.Size = new System.Drawing.Size(110, 23);
             this.lblDiceInCup.TabIndex = 5;
             this.lblDiceInCup.Text = "Dice In Cup";
             // 
@@ -132,17 +133,17 @@
             // 
             this.txtDiceInCup.BackColor = System.Drawing.SystemColors.Control;
             this.txtDiceInCup.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiceInCup.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiceInCup.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiceInCup.Location = new System.Drawing.Point(51, 35);
             this.txtDiceInCup.Name = "txtDiceInCup";
-            this.txtDiceInCup.Size = new System.Drawing.Size(29, 26);
+            this.txtDiceInCup.Size = new System.Drawing.Size(29, 25);
             this.txtDiceInCup.TabIndex = 6;
             this.txtDiceInCup.TabStop = false;
             this.txtDiceInCup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnReset
             // 
-            this.btnReset.Font = new System.Drawing.Font("Buxton Sketch", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(259, 98);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 27);
@@ -306,10 +307,10 @@
             // lblBrainsEaten
             // 
             this.lblBrainsEaten.AutoSize = true;
-            this.lblBrainsEaten.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrainsEaten.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBrainsEaten.Location = new System.Drawing.Point(452, 8);
             this.lblBrainsEaten.Name = "lblBrainsEaten";
-            this.lblBrainsEaten.Size = new System.Drawing.Size(120, 26);
+            this.lblBrainsEaten.Size = new System.Drawing.Size(116, 23);
             this.lblBrainsEaten.TabIndex = 27;
             this.lblBrainsEaten.Text = "Brains Eaten";
             // 
@@ -317,10 +318,10 @@
             // 
             this.txtBrainsEaten.BackColor = System.Drawing.SystemColors.Control;
             this.txtBrainsEaten.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBrainsEaten.Font = new System.Drawing.Font("Buxton Sketch", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBrainsEaten.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBrainsEaten.Location = new System.Drawing.Point(498, 39);
             this.txtBrainsEaten.Name = "txtBrainsEaten";
-            this.txtBrainsEaten.Size = new System.Drawing.Size(29, 26);
+            this.txtBrainsEaten.Size = new System.Drawing.Size(29, 25);
             this.txtBrainsEaten.TabIndex = 28;
             this.txtBrainsEaten.TabStop = false;
             this.txtBrainsEaten.Text = "0";
