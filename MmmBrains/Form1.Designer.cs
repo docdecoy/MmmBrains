@@ -334,7 +334,6 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "MmmBrains";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctDiceResult1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctDiceResult2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctDiceResult3)).EndInit();
