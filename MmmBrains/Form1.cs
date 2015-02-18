@@ -18,7 +18,7 @@ namespace MmmBrains
         public Form1()
         {
             InitializeComponent();
-            txtDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
+            lblDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
         }
 
         //private static void SetTextBox(TextBox textbox, Dice dice)
@@ -46,7 +46,6 @@ namespace MmmBrains
 
         private void btnRoll_Click(object sender, EventArgs e)
         {
-
             List<Dice> diceInHand = _diceCup.TakeDice(3);
 
             if (diceInHand.Count > 0)
@@ -82,7 +81,7 @@ namespace MmmBrains
                 ResetPctBox(pctDiceResult3, false);
             }
 
-            txtDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
+            lblDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
             if (_diceCup.DiceInCup.Count == 0)
             {
                 btnRoll.Enabled = false;
@@ -133,7 +132,7 @@ namespace MmmBrains
         private void btnReset_Click(object sender, EventArgs e)
         {
             _diceCup.Reset();
-            txtDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
+            lblDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
 
             //ResetTextBox(txtDiceResult1, true);
             //ResetTextBox(txtDiceResult2, true);

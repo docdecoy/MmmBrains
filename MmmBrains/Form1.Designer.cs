@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Label Label1;
+            System.Windows.Forms.Label Label2;
             this.btnRoll = new System.Windows.Forms.Button();
-            this.txtDiceResult1 = new System.Windows.Forms.TextBox();
-            this.txtDiceResult2 = new System.Windows.Forms.TextBox();
-            this.txtDiceResult3 = new System.Windows.Forms.TextBox();
-            this.lblDiceInCup = new System.Windows.Forms.Label();
-            this.txtDiceInCup = new System.Windows.Forms.TextBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.pctDiceResult1 = new System.Windows.Forms.PictureBox();
             this.pctDiceResult2 = new System.Windows.Forms.PictureBox();
@@ -54,8 +51,11 @@
             this.pctShotBox1 = new System.Windows.Forms.PictureBox();
             this.pctShotBox2 = new System.Windows.Forms.PictureBox();
             this.pctShotBox3 = new System.Windows.Forms.PictureBox();
+            this.lblDiceInCup = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblBrainsEaten = new System.Windows.Forms.Label();
-            this.txtBrainsEaten = new System.Windows.Forms.TextBox();
+            Label1 = new System.Windows.Forms.Label();
+            Label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctDiceResult1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctDiceResult2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctDiceResult3)).BeginInit();
@@ -77,9 +77,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctShotBox3)).BeginInit();
             this.SuspendLayout();
             // 
+            // Label1
+            // 
+            Label1.AutoSize = true;
+            Label1.Location = new System.Drawing.Point(12, 9);
+            Label1.Name = "Label1";
+            Label1.Size = new System.Drawing.Size(109, 25);
+            Label1.TabIndex = 5;
+            Label1.Text = "Dice In Cup";
+            // 
             // btnRoll
             // 
-            this.btnRoll.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoll.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoll.Location = new System.Drawing.Point(259, 65);
             this.btnRoll.Name = "btnRoll";
             this.btnRoll.Size = new System.Drawing.Size(75, 27);
@@ -88,66 +97,13 @@
             this.btnRoll.UseVisualStyleBackColor = true;
             this.btnRoll.Click += new System.EventHandler(this.btnRoll_Click);
             // 
-            // txtDiceResult1
-            // 
-            this.txtDiceResult1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiceResult1.Location = new System.Drawing.Point(246, 359);
-            this.txtDiceResult1.Name = "txtDiceResult1";
-            this.txtDiceResult1.Size = new System.Drawing.Size(29, 20);
-            this.txtDiceResult1.TabIndex = 2;
-            this.txtDiceResult1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtDiceResult1.Visible = false;
-            // 
-            // txtDiceResult2
-            // 
-            this.txtDiceResult2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiceResult2.Location = new System.Drawing.Point(281, 359);
-            this.txtDiceResult2.Name = "txtDiceResult2";
-            this.txtDiceResult2.Size = new System.Drawing.Size(29, 20);
-            this.txtDiceResult2.TabIndex = 3;
-            this.txtDiceResult2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtDiceResult2.Visible = false;
-            // 
-            // txtDiceResult3
-            // 
-            this.txtDiceResult3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiceResult3.Location = new System.Drawing.Point(316, 359);
-            this.txtDiceResult3.Name = "txtDiceResult3";
-            this.txtDiceResult3.Size = new System.Drawing.Size(29, 20);
-            this.txtDiceResult3.TabIndex = 4;
-            this.txtDiceResult3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtDiceResult3.Visible = false;
-            this.txtDiceResult3.TextChanged += new System.EventHandler(this.txtDiceResult3_TextChanged);
-            // 
-            // lblDiceInCup
-            // 
-            this.lblDiceInCup.AutoSize = true;
-            this.lblDiceInCup.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiceInCup.Location = new System.Drawing.Point(12, 9);
-            this.lblDiceInCup.Name = "lblDiceInCup";
-            this.lblDiceInCup.Size = new System.Drawing.Size(110, 23);
-            this.lblDiceInCup.TabIndex = 5;
-            this.lblDiceInCup.Text = "Dice In Cup";
-            // 
-            // txtDiceInCup
-            // 
-            this.txtDiceInCup.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDiceInCup.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiceInCup.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiceInCup.Location = new System.Drawing.Point(51, 35);
-            this.txtDiceInCup.Name = "txtDiceInCup";
-            this.txtDiceInCup.Size = new System.Drawing.Size(29, 25);
-            this.txtDiceInCup.TabIndex = 6;
-            this.txtDiceInCup.TabStop = false;
-            this.txtDiceInCup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // btnReset
             // 
-            this.btnReset.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(259, 98);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 27);
-            this.btnReset.TabIndex = 7;
+            this.btnReset.TabIndex = 1;
             this.btnReset.Text = "Stop!";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
@@ -304,36 +260,53 @@
             this.pctShotBox3.TabIndex = 26;
             this.pctShotBox3.TabStop = false;
             // 
+            // Label2
+            // 
+            Label2.AutoSize = true;
+            Label2.Location = new System.Drawing.Point(456, 9);
+            Label2.Name = "Label2";
+            Label2.Size = new System.Drawing.Size(116, 25);
+            Label2.TabIndex = 27;
+            Label2.Text = "Brains Eaten";
+            // 
+            // lblDiceInCup
+            // 
+            this.lblDiceInCup.AutoSize = true;
+            this.lblDiceInCup.Location = new System.Drawing.Point(50, 34);
+            this.lblDiceInCup.Name = "lblDiceInCup";
+            this.lblDiceInCup.Size = new System.Drawing.Size(32, 25);
+            this.lblDiceInCup.TabIndex = 29;
+            this.lblDiceInCup.Text = "13";
+            this.lblDiceInCup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1309, -140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 25);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "13";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblBrainsEaten
             // 
             this.lblBrainsEaten.AutoSize = true;
-            this.lblBrainsEaten.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrainsEaten.Location = new System.Drawing.Point(452, 8);
+            this.lblBrainsEaten.Location = new System.Drawing.Point(503, 34);
             this.lblBrainsEaten.Name = "lblBrainsEaten";
-            this.lblBrainsEaten.Size = new System.Drawing.Size(116, 23);
-            this.lblBrainsEaten.TabIndex = 27;
-            this.lblBrainsEaten.Text = "Brains Eaten";
-            // 
-            // txtBrainsEaten
-            // 
-            this.txtBrainsEaten.BackColor = System.Drawing.SystemColors.Control;
-            this.txtBrainsEaten.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBrainsEaten.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBrainsEaten.Location = new System.Drawing.Point(498, 39);
-            this.txtBrainsEaten.Name = "txtBrainsEaten";
-            this.txtBrainsEaten.Size = new System.Drawing.Size(29, 25);
-            this.txtBrainsEaten.TabIndex = 28;
-            this.txtBrainsEaten.TabStop = false;
-            this.txtBrainsEaten.Text = "0";
-            this.txtBrainsEaten.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblBrainsEaten.Size = new System.Drawing.Size(22, 25);
+            this.lblBrainsEaten.TabIndex = 31;
+            this.lblBrainsEaten.Text = "0";
+            this.lblBrainsEaten.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 441);
-            this.Controls.Add(this.txtBrainsEaten);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(584, 370);
             this.Controls.Add(this.lblBrainsEaten);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblDiceInCup);
+            this.Controls.Add(Label2);
             this.Controls.Add(this.pctShotBox3);
             this.Controls.Add(this.pctShotBox2);
             this.Controls.Add(this.pctShotBox1);
@@ -354,12 +327,11 @@
             this.Controls.Add(this.pctDiceResult2);
             this.Controls.Add(this.pctDiceResult1);
             this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.txtDiceInCup);
-            this.Controls.Add(this.lblDiceInCup);
-            this.Controls.Add(this.txtDiceResult3);
-            this.Controls.Add(this.txtDiceResult2);
-            this.Controls.Add(this.txtDiceResult1);
+            this.Controls.Add(Label1);
             this.Controls.Add(this.btnRoll);
+            this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "MmmBrains";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -390,11 +362,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnRoll;
-        private System.Windows.Forms.TextBox txtDiceResult1;
-        private System.Windows.Forms.TextBox txtDiceResult2;
-        private System.Windows.Forms.TextBox txtDiceResult3;
-        private System.Windows.Forms.Label lblDiceInCup;
-        private System.Windows.Forms.TextBox txtDiceInCup;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.PictureBox pctDiceResult1;
         private System.Windows.Forms.PictureBox pctDiceResult2;
@@ -415,8 +382,9 @@
         private System.Windows.Forms.PictureBox pctShotBox1;
         private System.Windows.Forms.PictureBox pctShotBox2;
         private System.Windows.Forms.PictureBox pctShotBox3;
+        private System.Windows.Forms.Label lblDiceInCup;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblBrainsEaten;
-        private System.Windows.Forms.TextBox txtBrainsEaten;
     }
 }
 
