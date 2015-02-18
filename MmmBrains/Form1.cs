@@ -12,8 +12,10 @@ namespace MmmBrains
 {
     public partial class Form1 : Form
     {
-
         private DiceCup _diceCup = new DiceCup();
+        private List<DiceFaceImage> _rolledShotguns = new List<DiceFaceImage>();
+        private List<DiceFaceImage> _rolledBrains = new List<DiceFaceImage>();
+        private List<DiceFaceImage> _rolledFeet = new List<DiceFaceImage>();
 
         public Form1()
         {
@@ -34,6 +36,32 @@ namespace MmmBrains
         private void btnRoll_Click(object sender, EventArgs e)
         {
             List<Dice> diceInHand = _diceCup.TakeDice(3);
+
+            // Roll my dice (TODO: do something with this?)
+            foreach (var dice in diceInHand)
+            {
+                var diceRollResult = dice.Roll();
+                switch (diceRollResult)
+                {
+                    case DiceFaceImage.GreenBrain:
+                    case DiceFaceImage.YellowBrain:
+                    case DiceFaceImage.RedBrain:
+                        _rolledBrains.Add(diceRollResult);
+                        break;
+                    case DiceFaceImage.GreenFeet:
+                    case DiceFaceImage.YellowFeet:
+                    case DiceFaceImage.RedFeet:
+                        _rolledFeet.Add(diceRollResult);
+                        break;
+                    case DiceFaceImage.GreenShotgun:
+                    case DiceFaceImage.YellowShotgun:
+                    case DiceFaceImage.RedShotgun:
+                        _rolledShotguns.Add(diceRollResult);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            }
 
             if (diceInHand.Count > 0)
             {
