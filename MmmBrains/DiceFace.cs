@@ -7,11 +7,6 @@ using System.Threading.Tasks;
 namespace MmmBrains
 {
     public enum DiceFaceImage
-    //{
-    //    Brain,
-    //    Feet,
-    //    Shotgun
-    //}
     {
         GreenBrain,
         GreenFeet,

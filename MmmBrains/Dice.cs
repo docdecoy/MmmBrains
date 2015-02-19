@@ -27,14 +27,11 @@ namespace MmmBrains
                     case 1:
                     case 2:
                     case 6:
-                        //return DiceFaceImage.Brain;
                         return DiceFaceImage.GreenBrain;
                     case 3:
                     case 4:
-                        //return DiceFaceImage.Feet;
                         return DiceFaceImage.GreenFeet;
                     case 5:
-                        //return DiceFaceImage.Shotgun;
                         return DiceFaceImage.GreenShotgun;
                 }
             }
@@ -44,15 +41,12 @@ namespace MmmBrains
                 {
                     case 1:
                     case 6:
-                        //return DiceFaceImage.Brain;
                         return DiceFaceImage.YellowBrain;
                     case 3:
                     case 4:
-                        //return DiceFaceImage.Feet;
                         return DiceFaceImage.YellowFeet;
                     case 2:
                     case 5:
-                        //return DiceFaceImage.Shotgun;
                         return DiceFaceImage.YellowShotgun;
                 }
             }
@@ -61,16 +55,13 @@ namespace MmmBrains
                 switch (diceResult)
                 {
                     case 1:
-                        //return DiceFaceImage.Brain;
                         return DiceFaceImage.RedBrain;
                     case 3:
                     case 4:
-                        //return DiceFaceImage.Feet;
                         return DiceFaceImage.RedFeet;
                     case 2:
                     case 5:
                     case 6:
-                        //return DiceFaceImage.Shotgun;
                         return DiceFaceImage.RedShotgun;
                 }
             }
