@@ -49,6 +49,7 @@
     </Compile>
     <Compile Include="DiceCup.cs" />
     <Compile Include="DiceFace.cs" />
+    <Compile Include="ListExtensions.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

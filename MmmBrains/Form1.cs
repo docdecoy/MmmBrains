@@ -36,6 +36,11 @@ namespace MmmBrains
         private void btnRoll_Click(object sender, EventArgs e)
         {
             List<Dice> diceInHand = _diceCup.TakeDice(3);
+            foreach (var dice in _rolledFeet)
+            {
+                diceInHand.Add(dice);
+
+            }
 
             // Roll my dice (TODO: do something with this?)
             foreach (var dice in diceInHand)

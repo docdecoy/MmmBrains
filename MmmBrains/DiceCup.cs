@@ -20,45 +20,25 @@ namespace MmmBrains
 
         public void Reset()
         {
-            int totalGreenDice = 0;
-            int totalYellowDice = 0;
-            int totalRedDice = 0;
-
             DiceInCup.Clear();
+            DiceInCup.Add(new Dice(Color.Green));
+            DiceInCup.Add(new Dice(Color.Green));
+            DiceInCup.Add(new Dice(Color.Green));
+            DiceInCup.Add(new Dice(Color.Green));
+            DiceInCup.Add(new Dice(Color.Green));
+            DiceInCup.Add(new Dice(Color.Green));
+            DiceInCup.Add(new Dice(Color.Yellow));
+            DiceInCup.Add(new Dice(Color.Yellow));
+            DiceInCup.Add(new Dice(Color.Yellow));
+            DiceInCup.Add(new Dice(Color.Yellow));
+            DiceInCup.Add(new Dice(Color.Red));
+            DiceInCup.Add(new Dice(Color.Red));
+            DiceInCup.Add(new Dice(Color.Red));
 
-            do
-            {
-                int getDice = Global.NumberGenerator.Next(1, 4);
+            DiceInCup = DiceInCup.Shuffle();
 
-                switch (getDice)
-                {
-                    case 1:
-                        if (totalGreenDice < 6)
-                        {
-                            DiceInCup.Add(new Dice(Color.Green));
-                            totalGreenDice++;
-                        }
-                        break;
-                    case 2:
-                        if (totalYellowDice < 4)
-                        {
-                            DiceInCup.Add(new Dice(Color.Yellow));
-                            totalYellowDice++;
-                        }
-                        break;
-                    case 3:
-                        if (totalRedDice < 3)
-                        {
-                            DiceInCup.Add(new Dice(Color.Red));
-                            totalRedDice++;
-                        }
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-
-            } while (DiceInCup.Count < 13);
         }
+
 
         public List<Dice> TakeDice(int numberToGrab)
         {

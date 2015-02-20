@@ -86,6 +86,15 @@
             Label1.TabIndex = 5;
             Label1.Text = "Dice In Cup";
             // 
+            // Label2
+            // 
+            Label2.AutoSize = true;
+            Label2.Location = new System.Drawing.Point(456, 9);
+            Label2.Name = "Label2";
+            Label2.Size = new System.Drawing.Size(116, 25);
+            Label2.TabIndex = 27;
+            Label2.Text = "Brains Eaten";
+            // 
             // btnRoll
             // 
             this.btnRoll.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -259,15 +268,6 @@
             this.pctShotBox3.Size = new System.Drawing.Size(50, 50);
             this.pctShotBox3.TabIndex = 26;
             this.pctShotBox3.TabStop = false;
-            // 
-            // Label2
-            // 
-            Label2.AutoSize = true;
-            Label2.Location = new System.Drawing.Point(456, 9);
-            Label2.Name = "Label2";
-            Label2.Size = new System.Drawing.Size(116, 25);
-            Label2.TabIndex = 27;
-            Label2.Text = "Brains Eaten";
             // 
             // lblDiceInCup
             // 
