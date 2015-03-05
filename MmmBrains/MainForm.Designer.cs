@@ -1,6 +1,6 @@
 ﻿namespace MmmBrains
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -299,7 +299,7 @@
             this.lblBrainsEaten.Text = "0";
             this.lblBrainsEaten.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(584, 370);
@@ -332,7 +332,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "MmmBrains";
             ((System.ComponentModel.ISupportInitialize)(this.pctDiceResult1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctDiceResult2)).EndInit();

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace MmmBrains
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private DiceCup _diceCup = new DiceCup();
         private List<DiceFaceImage> _rolledShotguns = new List<DiceFaceImage>();
         private List<DiceFaceImage> _rolledBrains = new List<DiceFaceImage>();
         private List<DiceFaceImage> _rolledFeet = new List<DiceFaceImage>();
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             lblDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
