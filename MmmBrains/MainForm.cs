@@ -20,7 +20,7 @@ namespace MmmBrains
         public MainForm()
         {
             InitializeComponent();
-            lblDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
+            SetDiceInCupText();
         }
 
         private static void SetPctBox(PictureBox pctbox, Dice dice)
@@ -43,30 +43,30 @@ namespace MmmBrains
             //}
 
             // Roll my dice (TODO: do something with this?)
-            foreach (var dice in diceInHand)
-            {
-                var diceRollResult = dice.Roll();
-                switch (diceRollResult)
-                {
-                    case DiceFaceImage.GreenBrain:
-                    case DiceFaceImage.YellowBrain:
-                    case DiceFaceImage.RedBrain:
-                        _rolledBrains.Add(diceRollResult);
-                        break;
-                    case DiceFaceImage.GreenFeet:
-                    case DiceFaceImage.YellowFeet:
-                    case DiceFaceImage.RedFeet:
-                        _rolledFeet.Add(diceRollResult);
-                        break;
-                    case DiceFaceImage.GreenShotgun:
-                    case DiceFaceImage.YellowShotgun:
-                    case DiceFaceImage.RedShotgun:
-                        _rolledShotguns.Add(diceRollResult);
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-            }
+            //foreach (var dice in diceInHand)
+            //{
+            //    var diceRollResult = dice.Roll();
+            //    switch (diceRollResult)
+            //    {
+            //        case DiceFaceImage.GreenBrain:
+            //        case DiceFaceImage.YellowBrain:
+            //        case DiceFaceImage.RedBrain:
+            //            _rolledBrains.Add(diceRollResult);
+            //            break;
+            //        case DiceFaceImage.GreenFeet:
+            //        case DiceFaceImage.YellowFeet:
+            //        case DiceFaceImage.RedFeet:
+            //            _rolledFeet.Add(diceRollResult);
+            //            break;
+            //        case DiceFaceImage.GreenShotgun:
+            //        case DiceFaceImage.YellowShotgun:
+            //        case DiceFaceImage.RedShotgun:
+            //            _rolledShotguns.Add(diceRollResult);
+            //            break;
+            //        default:
+            //            throw new ArgumentOutOfRangeException();
+            //    }
+            //}
 
             if (diceInHand.Count > 0)
             {
@@ -94,8 +94,9 @@ namespace MmmBrains
             {
                 ResetPctBox(pctDiceResult3);
             }
+            
+            SetDiceInCupText();
 
-            lblDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
             if (_diceCup.DiceInCup.Count == 0)
             {
                 btnRoll.Enabled = false;
@@ -129,10 +130,15 @@ namespace MmmBrains
             throw new InvalidOperationException();
         }
 
+        private void SetDiceInCupText()
+        {
+            lblDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
+        }
+
         private void btnReset_Click(object sender, EventArgs e)
         {
             _diceCup.Reset();
-            lblDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
+            SetDiceInCupText();
 
             ResetPctBox(pctDiceResult1);
             ResetPctBox(pctDiceResult2);
