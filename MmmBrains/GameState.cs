@@ -6,9 +6,20 @@ using System.Threading.Tasks;
 
 namespace MmmBrains
 {
-    class GameState
+    public class GameState
     {
+        public DiceCup DiceCup { get; private set; }
+        public List<DiceFaceImage> RolledShotguns { get; private set; }
+        public List<DiceFaceImage> RolledBrains { get; private set; }
+        public List<DiceFaceImage> RolledFeet { get; private set; }
 
+        public void NewGame()
+        {
+            DiceCup = new DiceCup();
+            RolledShotguns = new List<DiceFaceImage>();
+            RolledBrains = new List<DiceFaceImage>();
+            RolledFeet = new List<DiceFaceImage>();            
+        }
                 // Roll my dice (TODO: do something with this?)
             //foreach (var dice in diceInHand)
             //{

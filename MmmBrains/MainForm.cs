@@ -12,14 +12,14 @@ namespace MmmBrains
 {
     public partial class MainForm : Form
     {
-        private DiceCup _diceCup = new DiceCup();
-        private List<DiceFaceImage> _rolledShotguns = new List<DiceFaceImage>();
-        private List<DiceFaceImage> _rolledBrains = new List<DiceFaceImage>();
-        private List<DiceFaceImage> _rolledFeet = new List<DiceFaceImage>();
+        private readonly GameState _gameState = new GameState();
 
         public MainForm()
         {
             InitializeComponent();
+            
+            _gameState.NewGame();
+
             SetDiceInCupText();
         }
 
@@ -35,7 +35,7 @@ namespace MmmBrains
 
         private void btnRoll_Click(object sender, EventArgs e)
         {
-            List<Dice> diceInHand = _diceCup.TakeDice(3);
+            List<Dice> diceInHand = _gameState.DiceCup.TakeDice(3);
             //foreach (var dice in _rolledFeet)
             //{
             //    diceInHand.Add(dice);
@@ -97,7 +97,7 @@ namespace MmmBrains
             
             SetDiceInCupText();
 
-            if (_diceCup.DiceInCup.Count == 0)
+            if (_gameState.DiceCup.DiceInCup.Count == 0)
             {
                 btnRoll.Enabled = false;
                 btnReset.Focus();
@@ -132,12 +132,12 @@ namespace MmmBrains
 
         private void SetDiceInCupText()
         {
-            lblDiceInCup.Text = _diceCup.DiceInCup.Count.ToString();
+            lblDiceInCup.Text = _gameState.DiceCup.DiceInCup.Count.ToString();
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            _diceCup.Reset();
+            _gameState.NewGame();
             SetDiceInCupText();
 
             ResetPctBox(pctDiceResult1);
